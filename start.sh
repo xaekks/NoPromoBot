@@ -1,4 +1,4 @@
-if [ -z $UPSTREAM_REPO ]
+if [ -z https://github.com/Bhadvaheroku/EasyAdvAutoFilter.git ]
 then
   echo "Cloning main Repository"
   git clone https://github.com/UnknownBotz/EasyAdvAutoFilter.git
