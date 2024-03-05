@@ -199,10 +199,10 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
     CAPTION = """
-<b><a href=https://t.me/MovieMax_Backup1>{file_caption}</a>
+<b><a href=https://t.me/deathmovie_hub>{file_caption}</a>
 
 
-▫️ Mᴀɪɴ Cʜᴀɴɴᴇʟ : @MovieMax_Backup1
+▫️ Mᴀɪɴ Cʜᴀɴɴᴇʟ : @deathmovie_hub
 ▫️ Mᴀɪɴ Cʜᴀɴɴᴇʟ : @deathking_botworld</b>""" 
 
     FORCE_SUB = """
