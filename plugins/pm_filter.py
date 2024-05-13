@@ -114,11 +114,11 @@ async def next_page(bot, query):
     temp.GETALL[key] = files
     temp.SHORT[query.from_user.id] = query.message.chat.id
     settings = await get_settings(query.message.chat.id)
-     if 'is_shortlink' in settings.keys():
-         ENABLE_SHORTLINK = settings['is_shortlink']
-     else:
-         await save_group_settings(query.message.chat.id, 'is_shortlink', False)
-         ENABLE_SHORTLINK = False
+    if 'is_shortlink' in settings.keys():
+        ENABLE_SHORTLINK = settings['is_shortlink']
+    else:
+        await save_group_settings(query.message.chat.id, 'is_shortlink', False)
+        ENABLE_SHORTLINK = False
     pre = 'filep' if settings['file_secure'] else 'file'
     # cap = temp.CAP.get(key)
     if settings['button']:
@@ -130,6 +130,21 @@ async def next_page(bot, query):
             ]
             for file in files
         ]
+    else:
+        btn = [
+            [
+                InlineKeyboardButton(
+                    text=f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'files#{file.file_id}'
+                ),
+                InlineKeyboardButton(
+                    text=f"{get_size(file.file_size)}",
+                    callback_data=f'files_#{file.file_id}',
+                ),
+            ]
+            for file in files
+        ]
+        
+
      else:
          btn = [
              [
