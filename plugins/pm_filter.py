@@ -43,32 +43,44 @@ BUTTONS0 = {}
 BUTTONS1 = {}
 BUTTONS2 = {}
 SPELL_CHECK = {}
-ADMIN_USRNM = "UNKNOWN_MAN_ON_MISSION"
+ADMIN_USRNM = "TryToLiveAlon"
 # ENABLE_SHORTLINK = ""
 
-@Client.on_message(filters.group | filters.private & filters.text & filters.incoming)
+SPECIAL_CHAT_ID = -1002074595524
+
+@Client.on_message(filters.text & filters.incoming)
 async def give_filter(client, message):
-    if message.chat.id != SUPPORT_CHAT_ID:
-        manual = await manual_filters(client, message)
-        if manual == False:
-            settings = await get_settings(message.chat.id)
-            try:
-                if settings['auto_ffilter']:
-                    await auto_filter(client, message)
-            except KeyError:
-                grpid = await active_connection(str(message.from_user.id))
-                await save_group_settings(grpid, 'auto_ffilter', True)
-                settings = await get_settings(message.chat.id)
-                if settings['auto_ffilter']:
-                    await auto_filter(client, message) 
-    else: #a better logic to avoid repeated lines of code in auto_filter function
+    if message.chat.type == "private":
+        await message.reply_text(
+            "I ꜱᴇᴀʀᴄʜ ɪɴ ᴍʏ ɢʀᴏᴜᴘ ɪ ᴅᴏɴ'ᴛ ʀᴇꜱᴘᴏɴᴅ ᴛᴏ ᴘʀɪᴠᴀᴛᴇ ᴍᴇꜱꜱᴀɢᴇꜱ. Tᴏ ᴜꜱᴇ ᴍʏ ғᴇᴀᴛᴜʀᴇꜱ, ᴘʟᴇᴀꜱᴇ ɪᴏɪɴ @Death_Movie_request."
+        )
+        return
+
+    if message.chat.id == SUPPORT_CHAT_ID:
         search = message.text
         temp_files, temp_offset, total_results = await get_search_results(chat_id=message.chat.id, query=search.lower(), offset=0, filter=True)
         if total_results == 0:
             return
         else:
-            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. \n\nTʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nJᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - @CINEMA_MOVIESZ</b>")
+            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. \n\nTʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nJᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - @Death_Movie_request</b>")
+    
+    if message.chat.id != SPECIAL_CHAT_ID:
+        manual = await manual_filters(client, message)
+        if not manual:
+            settings = await get_settings(message.chat.id)
+            auto_ffilter_enabled = settings.get('auto_ffilter')
 
+            if auto_ffilter_enabled:
+                await auto_filter(client, message)
+            else:
+                grpid = await active_connection(str(message.from_user.id))
+                await save_group_settings(grpid, 'auto_ffilter', True)
+                settings = await get_settings(message.chat.id)
+                if settings['auto_ffilter']:
+                    await auto_filter(client, message)
+        
+
+            
 # @Client.on_message(filters.private & filters.text & filters.incoming)
 # async def pm_text(bot, message):
 #     content = message.text
@@ -1305,7 +1317,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url=link.invite_link),
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
                ],[
-                 InlineKeyboardButton("", url="t.me/Unknown_Support_Bot")
+                 InlineKeyboardButton("", url="t.me/TryToLiveAlon")
                ]]
         if query.from_user.id in ADMINS:
             user = await client.get_users(from_user)
@@ -1468,7 +1480,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('✉️ ᴀɴʏ ǫᴜᴇʀʏ ✉️', url='t.me/Unknown_Support_Bot')
+            InlineKeyboardButton('✉️ ᴀɴʏ ǫᴜᴇʀʏ ✉️', url='t.me/TryToLiveAlon')
         ], [
             InlineKeyboardButton('∙ ꜰɪʟᴛᴇʀs ∙', callback_data='filters'),
             InlineKeyboardButton('∙ ꜰɪʟᴇ sᴛᴏʀᴇ ∙', callback_data='store_file')
@@ -1787,7 +1799,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "owner_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="t.me/Unknown_Support_Bot")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="t.me/TryToLiveAlon")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1858,7 +1870,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "shortlink_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="t.me/Unknown_Support_Bot")
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ", url="t.me/TryToLiveAlon")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1989,7 +2001,7 @@ async def auto_filter(client, msg, spoll=False):
             btn = [[
                     InlineKeyboardButton(f"Searching  🔍  for {search}", url=CHNL_LNK)
                     ]]
-            dlt = await message.reply_sticker('CAACAgQAAxkBAAJmcmWH4F2JtnTYhn5sQDZDYdC0tUPgAAL6FgACpvFxHkyKzYENX-WBHgQ', reply_markup=InlineKeyboardMarkup(btn))
+            dlt = await message.reply_sticker('CAACAgIAAx0Cd1b-8AACgBJmQZ7_Z2wCWAiXZC6fqpWFTtEdHQACcQgAAoSUQUlvaAkaprvOcx4E', reply_markup=InlineKeyboardMarkup(btn))
             search = search.lower()
             find = search.split(" ")
             search = ""
@@ -2023,7 +2035,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [[
                 InlineKeyboardButton(f"Searching  🔍  for {search}", url=CHNL_LNK)
                 ]]
-        dlt = await message.reply_sticker('CAACAgQAAxkBAAJmcmWH4F2JtnTYhn5sQDZDYdC0tUPgAAL6FgACpvFxHkyKzYENX-WBHgQ', reply_markup=InlineKeyboardMarkup(btn))
+        dlt = await message.reply_sticker('CAACAgIAAx0Cd1b-8AACgBJmQZ7_Z2wCWAiXZC6fqpWFTtEdHQACcQgAAoSUQUlvaAkaprvOcx4E', reply_markup=InlineKeyboardMarkup(btn))
         settings = await get_settings(message.chat.id)
         await msg.message.delete()
     # if 'is_shortlink' in settings.keys():
