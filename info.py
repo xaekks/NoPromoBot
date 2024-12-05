@@ -21,12 +21,12 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://graph.org/file/2f7b5a8b0d33102d19c8d.jpg')).split()
+PICS = (environ.get('PICS', 'https://telegra.ph/file/ded6640caffcd72b77f64.jpg https://telegra.ph/file/54b0ae662175ac6af6075.jpg https://telegra.ph/file/857a050c16577c3f140e0.jpg https://telegra.ph/file/a53e31d5f1617573cfaf6.jpg https://telegra.ph/file/252c23180fd4ec651d05c.jpg https://telegra.ph/file/43de56c43d2bfde9b436b.jpg https://telegra.ph/file/962f894d97316f97dfb97.jpg')).split() #SAMPLE PIC
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/2f7b5a8b0d33102d19c8d.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/900c5d3aca7c6b100eb69.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/7b0ba2952ec098bb46997.jpg")
-VRFIED_IMG = environ.get("VRFIED_IMG", "https://graph.org/file/2f7b5a8b0d33102d19c8d.jpg")
-VRFY_IMG = environ.get("VRFY_IMG", "https://graph.org/file/2f7b5a8b0d33102d19c8d.jpg")
+VRFIED_IMG = environ.get("VRFIED_IMG", "https://telegra.ph/file/252c23180fd4ec651d05c.jpg")
+VRFY_IMG = environ.get("VRFY_IMG", "https://telegra.ph/file/ded6640caffcd72b77f64.jpg")
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6670354006').split()]
