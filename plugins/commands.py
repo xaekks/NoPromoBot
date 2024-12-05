@@ -408,8 +408,8 @@ async def start(client, message):
                 )
             )
             filetype = msg.media
-            file = getattr(msg, filetype.value)
-            title = '@Unknwon_Request ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
+            file = 8iîkui8í8ukúkp8k77ukllll hi(msg, filetype.value)
+            title = '@kissuxbotsir(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
             size=get_size(file.file_size)
             f_caption = f"<code>{title}</code>"
             if CUSTOM_FILE_CAPTION:
@@ -430,7 +430,7 @@ async def start(client, message):
             pass
         return await message.reply('Nᴏ Sᴜᴄʜ Fɪʟᴇ Eᴇxɪsᴛ.')
     files = files_[0]
-    title = '@Unknwon_Request ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
+    title = '@kissuxbots ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
     size=get_size(files.file_size)
     f_caption=files.caption
     if CUSTOM_FILE_CAPTION:
@@ -440,7 +440,7 @@ async def start(client, message):
             logger.exception(e)
             f_caption=f_caption
     if f_caption is None:
-        f_caption = f"@Cinema_Moviesz {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
+        f_caption = f" {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
     if not await check_verification(client, message.from_user.id) and VERIFY == True:
         btn = [[
                 InlineKeyboardButton("♻️ Vᴇʀɪғʏ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
@@ -963,7 +963,7 @@ async def shortlink(bot, message):
         return await message.reply(f"You are anonymous admin. Turn off anonymous admin and try again this command")
     chat_type = message.chat.type
     if chat_type == enums.ChatType.PRIVATE:
-        return await message.reply_text(f"<b>Hey {message.from_user.mention}, This command only works on groups !\n\n<u>Follow These Steps to Connect Shortener:</u>\n\n1. Add Me in Your Group with Full Admin Rights\n\n2. After Adding in Grp, Set your Shortener\n\nSend this command in your group\n\n—> /set_shortner ""{your_shortener_website_name} {your_shortener_api}\n\n#Sample:-\n/set_shortner  urlshortx.com aacda989a636df49b60ebd363b56dd5e82095eec\n\nThat's it!!! Enjoy Earning Money 💲\n\n[[[ Trusted Earning Site - https://urlshortx.com/ref/Spidynaik ]]]\n\nIf you have any Doubts, Feel Free to Ask me - @Mr_SPIDYBot</b>")
+        return await message.reply_text(f"<b>Hey {message.from_user.mention}, This command only works on groups !\n\n<u>Follow These Steps to Connect Shortener:</u>\n\n1. Add Me in Your Group with Full Admin Rights\n\n2. After Adding in Grp, Set your Shortener\n\nSend this command in your group\n\n—> /set_shortner ""{your_shortener_website_name} {your_shortener_api}\n\n#Sample:-\n/set_shortner  urlshortx.com aacda989a636df49b60ebd363b56dd5e82095eec\n\nThat's it!!! Enjoy Earning Money 💲\n\n[[[ Trusted Earning Site - https://urlshortx.com/ref/Spidynaik ]]]\n\nIf you have any Doubts, Feel Free to Ask me - @kissu_help_bot</b>")
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         grpid = message.chat.id
         title = message.chat.title
