@@ -43,7 +43,7 @@ BUTTONS0 = {}
 BUTTONS1 = {}
 BUTTONS2 = {}
 SPELL_CHECK = {}
-ADMIN_USRNM = "UNKNOWN_MAN_ON_MISSION"
+ADMIN_USRNM = "kissu_help_bot"
 # ENABLE_SHORTLINK = ""
 
 @Client.on_message(filters.group | filters.private & filters.text & filters.incoming)
@@ -67,7 +67,7 @@ async def give_filter(client, message):
         if total_results == 0:
             return
         else:
-            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. \n\nTʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nJᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - @CINEMA_MOVIESZ</b>")
+            return await message.reply_text(f"<b>Hᴇʏ {message.from_user.mention}, {str(total_results)} ʀᴇsᴜʟᴛs ᴀʀᴇ ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {search}. \n\nTʜɪs ɪs ᴀ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ sᴏ ᴛʜᴀᴛ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ғɪʟᴇs ғʀᴏᴍ ʜᴇʀᴇ...\n\nJᴏɪɴ ᴀɴᴅ Sᴇᴀʀᴄʜ Hᴇʀᴇ - @ur_movie_group</b>")
 
 # @Client.on_message(filters.private & filters.text & filters.incoming)
 # async def pm_text(bot, message):
@@ -153,7 +153,7 @@ async def next_page(bot, query):
         )
         btn.insert(0, [
             InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("Send All", callback_data=f"sendfiles#{key}")
         ])
     else:
         btn = []
@@ -1468,7 +1468,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('✉️ ᴀɴʏ ǫᴜᴇʀʏ ✉️', url='t.me/Unknown_Support_Bot')
+            InlineKeyboardButton('✉️ ᴀɴʏ ǫᴜᴇʀʏ ✉️', url='t.me/kissu_help_bot')
         ], [
             InlineKeyboardButton('∙ ꜰɪʟᴛᴇʀs ∙', callback_data='filters'),
             InlineKeyboardButton('∙ ꜰɪʟᴇ sᴛᴏʀᴇ ∙', callback_data='store_file')
@@ -2084,7 +2084,7 @@ async def auto_filter(client, msg, spoll=False):
     #     ])
         btn.insert(0, [
             InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
-            InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("Send All", callback_data=f"sendfiles#{key}")
         ])
     # if ENABLE_TUTORIAL == True:
     #     btn.insert(0, [
@@ -2252,9 +2252,9 @@ async def advantage_spell_chok(client, msg):
     if not g_s:
         reqst_gle = query.replace(" ", "+")
         button = [[
-                   InlineKeyboardButton("🔍 𝐂𝐥𝐢𝐜𝐤 𝐓𝐨 𝐂𝐡𝐞𝐜𝐤 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠✅", url=f"https://www.google.com/search?q={reqst_gle}")
+                   InlineKeyboardButton("🔍 Tap To Check Spelling", url=f"https://www.google.com/search?q={reqst_gle}")
                 ],[
-                    InlineKeyboardButton("🔍 𝐂𝐥𝐢𝐜𝐤 𝐓𝐨 𝐂𝐡𝐞𝐜𝐤 𝐑𝐞𝐥𝐞𝐚𝐬𝐞 𝐝𝐚𝐭𝐞📆", url=f"https://www.google.com/search?q={reqst_gle}+release+date")
+                    InlineKeyboardButton("🔍 Tap To Know Release Date 📆", url=f"https://www.google.com/search?q={reqst_gle}+release+date")
                 ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
@@ -2292,9 +2292,9 @@ async def advantage_spell_chok(client, msg):
     if not movielist or chat_type == enums.ChatType.PRIVATE:
         reqst_gle = query.replace(" ", "+")
         button = [[
-                   InlineKeyboardButton("🔍 𝐂𝐥𝐢𝐜𝐤 𝐓𝐨 𝐂𝐡𝐞𝐜𝐤 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠✅", url=f"https://www.google.com/search?q={reqst_gle}")
+                   InlineKeyboardButton("🔍 Tap To Check Spelling ", url=f"https://www.google.com/search?q={reqst_gle}")
                 ],[
-                    InlineKeyboardButton("🔍 𝐂𝐥𝐢𝐜𝐤 𝐓𝐨 𝐂𝐡𝐞𝐜𝐤 𝐑𝐞𝐥𝐞𝐚𝐬𝐞 𝐝𝐚𝐭𝐞📆", url=f"https://www.google.com/search?q={reqst_gle}+release+date")
+                    InlineKeyboardButton("🔍 Tap To Know Release Date 📆", url=f"https://www.google.com/search?q={reqst_gle}+release+date")
                 ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
