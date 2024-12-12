@@ -1,5 +1,4 @@
-import os
-import asyncio
+import os, asyncio
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from telegraph import upload_file
@@ -8,22 +7,23 @@ from utils import get_file_id
 
 @Client.on_message(filters.command("telegraph") & filters.private)
 async def telegraph_upload(bot, update):
+    # Service Stopped
+    return await update.reply("🥲 This service is stopped due to https://t.me/durov/343")
+    
     replied = update.reply_to_message
     if not replied:
-        await update.reply_text("Rᴇᴩʟʏ Tᴏ A Pʜᴏᴛᴏ / Vɪᴅᴇᴏ Uɴᴅᴇʀ 5ᴍʙ")
-        return
+        return await update.reply_text("Rᴇᴘʟʏ Tᴏ A Pʜᴏᴛᴏ Oʀ Vɪᴅᴇᴏ Uɴᴅᴇʀ 5ᴍʙ")
     file_info = get_file_id(replied)
     if not file_info:
-        await update.reply_text("Nᴏᴛ Sᴜᴩᴩᴏʀᴛᴇᴅ Mᴇᴅɪᴀ Tʏᴩᴇ !")
-        return
-    text = await update.reply_text(text="<code>Dᴏᴡɴʟᴏᴀᴅɪɴɢ Iɴ Mʏ Sᴇʀᴠᴇʀ...</code>", disable_web_page_preview=True)   
+        return await update.reply_text("Not Supported!")
+    text = await update.reply_text(text="<code>Downloading To My Server ...</code>", disable_web_page_preview=True)   
     media = await update.reply_to_message.download()   
-    await text.edit_text(text="<code>Dᴏᴡɴʟᴏᴀᴅ Tᴏ Mʏ Sᴇʀᴠᴇʀ Is Cᴏᴍᴩʟᴇᴛᴇ. Nᴏᴡ IᴀM Uᴩʟᴏᴀᴅɪɴɢ Tᴏ Tᴇʟᴇɢʀᴀᴩʜ ...</code>", disable_web_page_preview=True)                                            
+    await text.edit_text(text="<code>Downloading Completed. Now I am Uploading to telegra.ph Link ...</code>", disable_web_page_preview=True)                                            
     try:
         response = upload_file(media)
     except Exception as error:
         print(error)
-        await text.edit_text(text=f"Eʀʀᴏʀ :- {error}", disable_web_page_preview=True)       
+        await text.edit_text(text=f"Error :- {error}", disable_web_page_preview=True)       
         return    
     try:
         os.remove(media)
@@ -31,13 +31,13 @@ async def telegraph_upload(bot, update):
         print(error)
         return    
     await text.edit_text(
-        text=f"<b>Lɪɴᴋ :-</b>\n\n<code>https://graph.org{response[0]}</code>",
+        text=f"<b>Link :-</b>\n\n<code>https://graph.org{response[0]}</code>",
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton(text="Open Link", url=f"https://graph.org{response[0]}"),
             InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url=https://graph.org{response[0]}")
             ],[
-            InlineKeyboardButton(text="✗ Cʟᴏsᴇ ✗", callback_data="close")
+            InlineKeyboardButton(text="✗ Close ✗", callback_data="close")
             ]])
         )
     
