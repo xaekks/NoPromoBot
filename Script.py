@@ -1,7 +1,7 @@
 class script(object):
     START_TXT = """<b>Hᴇʟʟᴏ {},</b>  
 
-<blockquote><b>➥ Mʏ Nᴀᴍᴇ Iꜱ <a href="https://t.me/{}">{}</a>.</b></blockquote>
+<blockquote><b>➥ Mʏ Nᴀᴍᴇ Iꜱ <a href="https://t.me/sanya_movies_bot">𝗦𝗮𝗻𝘆𝗮 𝗠𝗼𝘃𝗶𝗲𝘀 𝗕𝗼𝘁</a>.</b></blockquote>
 
 <b>➥ I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇꜱ.</b>  
 <b>➥ Jᴜꜱᴛ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ Aꜱ Aᴅᴍɪɴ Aɴᴅ Eɴᴊᴏʏ 😍.</b>
@@ -26,7 +26,7 @@ Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
 
     SOURCE_TXT = """<b>  
 ✭ ғᴏʀ ᴀɴʏ ǫᴜᴇʀʏ, ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ <a href='https://t.me/xaekks'>ᴅᴇᴠᴇʟᴏᴘᴇʀ</a>.  
-✭ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ʏᴏᴜʀ ᴏᴡɴ ᴀɴʏ ᴛʏᴘᴇ ᴏғ ʙᴏᴛ, ᴛʜᴇɴ <a href='https://t.me/xaekks'>ᴅᴍ ᴍᴇ</a> ("ᴘᴀɪᴅ").  
+✭ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ʏᴏᴜʀ ᴏᴡɴ ᴀɴʏ ᴛʏᴘᴇ ᴏғ ʙᴏᴛ, ᴛʜᴇɴ <a href='https://t.me/kissuhelp'>ᴅᴍ ᴍᴇ</a> ("ᴘᴀɪᴅ").  
 </b>"""  
 
 
@@ -218,11 +218,7 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
-    CAPTION = """
-<b>{file_name}
-
-▫️ Mᴀɪɴ Cʜᴀɴɴᴇʟ : @kissubots
-▫️ Mᴀɪɴ Cʜᴀɴɴᴇʟ : @kissuxbots</b>""" 
+    CAPTION = """<code>{file_name}</code>""" 
 
     FORCE_SUB = """
 **⚠️ Pʟᴇᴀsᴇ ғᴏʟʟᴏᴡ ᴛʜɪs ʀᴜʟe ⚠️
@@ -269,7 +265,7 @@ Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:
 
     OWNER_INFO = """
 <b> ⍟───[ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟꜱ ]───⍟
- ◈ ꜰᴜʟʟ ɴᴀᴍᴇ : <a href='t.me/kissu_help_bot'>𓆩•𝐊𝐢𝐬𝐬𝐮💞•𓆪</a></b>
+ ◈ ꜰᴜʟʟ ɴᴀᴍᴇ : <a href='t.me/kissuhelp'>𓆩•𝐊𝐢𝐬𝐬𝐮💞•𓆪</a></b>
  ◈ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ʏᴏᴜʀ ᴏᴡɴ ᴀɴʏ ᴛʏᴘᴇ ᴏғ ʙᴏᴛ ᴛʜᴇɴ ᴅᴍ ᴍᴇ " ᴘᴀɪᴅ " 
  </b>"""
 
@@ -308,7 +304,7 @@ Yoᴜ ᴄᴀɴ use this module to change font style
 𝖤𝗑𝖺𝗆𝗉𝗅𝖾 :- <code>/country India</code>"""
 
     RULE_TXT = """
-<b>♨️ 𝗚𝗥𝗢𝗨𝗣 𝗥𝗨𝗟𝗘𝗦 ♨️
+<b>🛡️ 𝗚𝗥𝗢𝗨𝗣 𝗥𝗨𝗟𝗘𝗦 🛡️
 
 🔹 Sᴇᴀʀᴄʜ Mᴏᴠɪᴇ Wɪᴛʜ Cᴏʀʀᴇᴄᴛ Sᴘᴇʟʟɪɴɢ :
 › ᴀᴠᴀᴛᴀʀ 2009 ✅
