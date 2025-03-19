@@ -24,7 +24,7 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
-                    InlineKeyboardButton('• Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ •', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('🛡️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ 🛡️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('↼ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=SPRT_CHNL),
                     InlineKeyboardButton('Mᴏᴠɪᴇ Gʀᴏᴜᴘ ⇀', url=GRP_LNK)
@@ -50,7 +50,7 @@ async def start(client, message):
             InlineKeyboardButton("Hᴇʟᴩ 💡", callback_data="help"),
             InlineKeyboardButton("Aʙᴏᴜᴛ 📰", callback_data="about")
             ],[
-           InlineKeyboardButton('❗❗ Dɪꜱᴄʟᴀɪᴍᴇʀ ❗❗', callback_data="chnl_info")
+           InlineKeyboardButton('❗❗ Dɪꜱᴄʟᴀɪᴍᴇʀ ❗❗', callback_data="dicl_btn")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)   
         m=await message.reply_sticker("CAACAgQAAxkBAAEOHdZn2piuieMXbUOL_7I2Iqb9ArF19QACKwoAArAqAVIMufqlVovwXzYE") 
@@ -103,7 +103,7 @@ async def start(client, message):
             InlineKeyboardButton("Hᴇʟᴩ 💡", callback_data="help"),
             InlineKeyboardButton("Aʙᴏᴜᴛ 📰", callback_data="about")
             ],[
-           InlineKeyboardButton('❗❗ Dɪꜱᴄʟᴀɪᴍᴇʀ ❗❗', callback_data="chnl_info")
+           InlineKeyboardButton('❗❗ Dɪꜱᴄʟᴀɪᴍᴇʀ ❗❗', callback_data="dicl_btn")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
