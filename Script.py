@@ -1,8 +1,7 @@
 class script(object):
     START_TXT = """<b>Hᴇʟʟᴏ {},</b>  
 
-<blockquote>  
-<b>➥ Mʏ Nᴀᴍᴇ Iꜱ <a href="https://t.me/{}">{}</a>.</b>  </blockquote>
+<blockquote><b>➥ Mʏ Nᴀᴍᴇ Iꜱ <a href="https://t.me/{}">{}</a>.</b></blockquote>
 
 <b>➥ I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏᴠɪᴇꜱ.</b>  
 <b>➥ Jᴜꜱᴛ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ Aꜱ Aᴅᴍɪɴ Aɴᴅ Eɴᴊᴏʏ 😍.</b>
@@ -12,19 +11,18 @@ class script(object):
     HELP_TXT = """<b>Hᴇʏ {}
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
 
-    ABOUT_TXT = """<b>╭─────────❖ About Me ❖─────────╮</b>
+    ABOUT_TXT = """<b>╭──❖ 「 About Me 」 ❖──╮</b>  
 
-<blockquote>  
-✦ <b>Nᴀᴍᴇ:</b> {}  
-✦ <b>Lɪʙʀᴀʀʏ:</b> <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a>  
-✦ <b>Lᴀɴɢᴜᴀɢᴇ:</b> <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a>  
-✦ <b>DᴀᴛᴀBᴀsᴇ:</b> <a href='https://www.mongodb.com/'>MᴏɴɢᴏDB</a>  
-✦ <b>Bᴏᴛ Sᴇʀᴠᴇʀ:</b> Pʀɪᴠᴀᴛᴇ  
-✦ <b>Bᴜɪʟᴅ Sᴛᴀᴛᴜs:</b> v2.7.1 [ Sᴛᴀʙʟᴇ ]  
-</blockquote>
+<blockquote><b>✦ Nᴀᴍᴇ:</b> {}</blockquote>  
+<blockquote><b>✦ Lɪʙʀᴀʀʏ:</b> <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a></blockquote>  
+<blockquote><b>✦ Lᴀɴɢᴜᴀɢᴇ:</b> <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a></blockquote>  
+<blockquote><b>✦ DᴀᴛᴀBᴀsᴇ:</b> <a href='https://www.mongodb.com/'>MᴏɴɢᴏDB</a></blockquote>  
+<blockquote><b>✦ Bᴏᴛ Sᴇʀᴠᴇʀ:</b> Pʀɪᴠᴀᴛᴇ</blockquote>  
+<blockquote><b>✦ Bᴜɪʟᴅ Sᴛᴀᴛᴜs:</b> v2.7.1 [ Sᴛᴀʙʟᴇ ]</blockquote>  
 
-<b>╰────────────────────────╯</b>
+<b>╰──────────────────╯</b>
 """
+
 
 
     SOURCE_TXT = """<b>  
