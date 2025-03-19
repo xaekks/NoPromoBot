@@ -1659,15 +1659,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "mods":
-        buttons = [[
-            InlineKeyboardButton('🎭 Sᴛɪᴄᴋᴇʀ_ɪᴅ ⚜️', callback_data='sticker')
-        ],[ 
+        buttons = [[ 
             InlineKeyboardButton('🙌 Fᴏɴᴛ Gᴇɴᴇʀᴀᴛᴏʀ 📝', callback_data='font')
-        ],[
+        ]],[[
+            InlineKeyboardButton('🎭 Sᴛɪᴄᴋᴇʀ_ɪᴅ ⚜️', callback_data='sticker')
+        ]],[[
             InlineKeyboardButton('🔭 Sᴛᴀᴛs 📊', callback_data='stats')
         ],[
             InlineKeyboardButton('🌐 ᴄᴏᴜɴᴛʀʏ 🔅', callback_data='country')
-        ],[
+        ]],[[
             InlineKeyboardButton('‹‹‹ Bᴀᴄᴋ', callback_data='about')
         ]]       
         reply_markup = InlineKeyboardMarkup(buttons)
