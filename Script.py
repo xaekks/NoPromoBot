@@ -13,15 +13,18 @@ Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
 
     ABOUT_TXT = """<b>╭──❖ 「 About Me 」 ❖──╮</b>  
 
-<blockquote><b>✦ Nᴀᴍᴇ:</b> {}</blockquote>  
-<blockquote><b>✦ Lɪʙʀᴀʀʏ:</b> <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a></blockquote>  
-<blockquote><b>✦ Lᴀɴɢᴜᴀɢᴇ:</b> <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a></blockquote>  
-<blockquote><b>✦ DᴀᴛᴀBᴀsᴇ:</b> <a href='https://www.mongodb.com/'>MᴏɴɢᴏDB</a></blockquote>  
-<blockquote><b>✦ Bᴏᴛ Sᴇʀᴠᴇʀ:</b> Pʀɪᴠᴀᴛᴇ</blockquote>  
-<blockquote><b>✦ Bᴜɪʟᴅ Sᴛᴀᴛᴜs:</b> v2.7.1 [ Sᴛᴀʙʟᴇ ]</blockquote>  
+<blockquote><b>  
+✦ Nᴀᴍᴇ: {}  
+✦ Lɪʙʀᴀʀʏ: <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a>  
+✦ Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a>  
+✦ DᴀᴛᴀBᴀsᴇ: <a href='https://www.mongodb.com/'>MᴏɴɢᴏDB</a>  
+✦ Bᴏᴛ Sᴇʀᴠᴇʀ: Pʀɪᴠᴀᴛᴇ  
+✦ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: v2.7.1 [ Sᴛᴀʙʟᴇ ]  
+</b></blockquote>  
 
 <b>╰──────────────────╯</b>
 """
+
 
 
 
