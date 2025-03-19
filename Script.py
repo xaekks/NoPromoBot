@@ -12,16 +12,12 @@ class script(object):
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
 
     ABOUT_TXT = """<b>╭──❖ 「 About Me 」 ❖──╮</b>  
-
-<blockquote><b>  
-✦ Nᴀᴍᴇ: {}  
+<blockquote><b>✦ Nᴀᴍᴇ: {}  
 ✦ Lɪʙʀᴀʀʏ: <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a>  
 ✦ Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a>  
 ✦ DᴀᴛᴀBᴀsᴇ: <a href='https://www.mongodb.com/'>MᴏɴɢᴏDB</a>  
 ✦ Bᴏᴛ Sᴇʀᴠᴇʀ: Pʀɪᴠᴀᴛᴇ  
-✦ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: v2.7.1 [ Sᴛᴀʙʟᴇ ]  
-</b></blockquote>  
-
+✦ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: v2.7.1 [ Sᴛᴀʙʟᴇ ]</b></blockquote>  
 <b>╰──────────────────╯</b>
 """
 
@@ -113,14 +109,17 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 
     STATUS_TXT = """<b>⍟────[ ʙᴏᴛ sᴛᴀᴛᴜs ]────⍟</b>  
 
-<blockquote><b>★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code></b></blockquote>  
-<blockquote><b>★ Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code></b></blockquote>  
-<blockquote><b>★ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code></b></blockquote>  
-<blockquote><b>★ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{}</code></b></blockquote>  
-<blockquote><b>★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{}</code></b></blockquote>  
+<blockquote><b>  
+★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>  
+★ Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code>  
+★ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code>  
+★ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{}</code>  
+★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{}</code>  
+</b></blockquote>  
 
 <b>•❅─────✧❅✦❅✧─────❅•</b>
 """
+
 
 
 
