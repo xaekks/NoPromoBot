@@ -391,26 +391,20 @@ async def start(client, message):
                 )
                 return
             msg = await client.send_cached_media(
-                chat_id=message.from_user.id,
-                file_id=file_id,
-                protect_content=True if pre == 'filep' else False,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                     [
-                      InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url="t.me/kissuxbots")
-                   ],[
-                      InlineKeyboardButton("Mᴏᴠɪᴇ Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ", url=GRP_LNK)
-                     ]
-                    ]
-                )
-            )
-            filetype = msg.media
-            file = getattr(msg, filetype.value)
-            title = '@Unknwon_Request ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
-            size=get_size(file.file_size)
-            f_caption = f"<code>{title}</code>"
-            if CUSTOM_FILE_CAPTION:
+    chat_id=message.from_user.id,
+    file_id=file_id,
+    protect_content=True if pre == 'filep' else False
+)
+
+filetype = msg.media
+file = getattr(msg, filetype.value)
+
+# Build the title using the file name while filtering out any parts starting with '[' or '@'
+title = ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
+
+size = get_size(file.file_size)
+f_caption = f"<code>{title}</code>"
+if CUSTOM_FILE_CAPTION:
                 try:
                     f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='')
                 except:
@@ -426,20 +420,31 @@ async def start(client, message):
             # return
         except:
             pass
-        return await message.reply('Nᴏ Sᴜᴄʜ Fɪʟᴇ Eᴇxɪsᴛ.')
-    files = files_[0]
-    title = '@Unknwon_Request ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
-    size=get_size(files.file_size)
-    f_caption=files.caption
-    if CUSTOM_FILE_CAPTION:
-        try:
-            f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
-        except Exception as e:
-            logger.exception(e)
-            f_caption=f_caption
-    if f_caption is None:
-        f_caption = f"@Unknwon_Request {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
-    if not await check_verification(client, message.from_user.id) and VERIFY == True:
+        await message.reply('Nᴏ Sᴜᴄʜ Fɪʟᴇ Exɪsᴛs.')
+files = files_[0]
+
+# Extract and format file name without usernames or brackets
+title = ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
+size = get_size(files.file_size)
+f_caption = files.caption
+
+if CUSTOM_FILE_CAPTION:
+    try:
+        f_caption = CUSTOM_FILE_CAPTION.format(
+            file_name='' if title is None else title, 
+            file_size='' if size is None else size, 
+            file_caption='' if f_caption is None else f_caption
+        )
+    except Exception as e:
+        logger.exception(e)
+        f_caption = f_caption
+
+# Ensure a default caption if none is provided
+if f_caption is None:
+    f_caption = f"<code>{title}</code>"
+
+if not await check_verification(client, message.from_user.id) and VERIFY:
+
         btn = [[
                 InlineKeyboardButton("♻️ Vᴇʀɪғʏ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
                 InlineKeyboardButton("⚠️ Hᴏᴡ Tᴏ Vᴇʀɪғʏ ⚠️", url=HOW_TO_VERIFY)
@@ -455,18 +460,7 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        protect_content=True if pre == 'filep' else False,
-        reply_markup=InlineKeyboardMarkup(
-            [
-             [
-              InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
-              InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url="t.me/kissuxbots")
-           ],[
-              InlineKeyboardButton("Mᴏᴠɪᴇ Rᴇᴏ̨ᴜᴇsᴛ Gʀᴏᴜᴘ", url=GRP_LNK)
-             ]
-            ]
-        )
-    )
+        protect_content=True if pre == 'filep' else False
     # btn = [[
     #     InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
     # ]]
