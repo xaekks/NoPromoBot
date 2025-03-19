@@ -109,14 +109,11 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 
     STATUS_TXT = """<b>⍟────[ ʙᴏᴛ sᴛᴀᴛᴜs ]────⍟</b>  
 
-<blockquote><b>  
-★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>  
+<blockquote><b>★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>  
 ★ Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code>  
 ★ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code>  
 ★ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{}</code>  
-★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{}</code>  
-</b></blockquote>  
-
+★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{}</code> </b></blockquote>  
 <b>•❅─────✧❅✦❅✧─────❅•</b>
 """
 
