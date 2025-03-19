@@ -21,7 +21,8 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://telegra.ph/file/ded6640caffcd72b77f64.jpg https://telegra.ph/file/54b0ae662175ac6af6075.jpg https://telegra.ph/file/857a050c16577c3f140e0.jpg https://telegra.ph/file/a53e31d5f1617573cfaf6.jpg https://telegra.ph/file/252c23180fd4ec651d05c.jpg https://telegra.ph/file/43de56c43d2bfde9b436b.jpg https://telegra.ph/file/962f894d97316f97dfb97.jpg')).split() #SAMPLE PIC
+PICS = (environ.get('PICS', '
+https://vault.pictures/p/37269ad3435b49a7804d4b7fed793cfd https://vault.pictures/p/baede4615d0644ef82b2267a45e06207 https://vault.pictures/p/c07d1d8a75424bfb9ad0d9e4eee0208c https://vault.pictures/p/5b33b74c0f6e4fa2b050493ae0038ef8 https://vault.pictures/p/e57f4b075c8a4f2284e5b38325309dea https://vault.pictures/p/82e9a53cbc684ebda6384a7b98d8c6f9 https://vault.pictures/p/7ef1c9c7db7a43759952f93ccd300340 https://vault.pictures/p/893b56043afd43f69733b405a61a3c65 https://vault.pictures/p/3dc4a0ab1e674e7794ee0c409a5710d9')).split()
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/2f7b5a8b0d33102d19c8d.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/900c5d3aca7c6b100eb69.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/7b0ba2952ec098bb46997.jpg")
@@ -45,7 +46,7 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://supriyaxrajput3:helloji@cluster0.sh4qe.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://supriyaxrajput10:lucas88@cluster0.flxg2.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'AutoFilter')
 
