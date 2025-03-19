@@ -12,17 +12,26 @@ class script(object):
     HELP_TXT = """<b>Hᴇʏ {}
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
 
-    ABOUT_TXT = """<b>✯ Mʏ Nᴀᴍᴇ: {}
-✯ Lɪʙʀᴀʀʏ: <a href='docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a>
-✯ Lᴀɴɢᴜᴀɢᴇ: <a href='www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a>
-✯ DᴀᴛᴀBᴀsᴇ: <a href='www.mongodb.com'>MᴏɴɢᴏDB</a>
-✯ Bᴏᴛ Sᴇʀᴠᴇʀ: Pʀɪᴠᴀᴛᴇ
-✯ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: v2.7.1 [ Sᴛᴀʙʟᴇ ]</b>"""
+    ABOUT_TXT = """<b>╭─────────❖ About Me ❖─────────╮</b>
 
-    SOURCE_TXT = """<b>
-✭ ғᴏʀ ᴀɴʏ ǫᴜᴇʀʏ ᴄᴏɴᴛᴀᴄᴛ ᴛᴏ ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴘᴇʀ 
-✭ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ʏᴏᴜʀ ᴏᴡɴ ᴀɴʏ ᴛʏᴘᴇ ᴏғ ʙᴏᴛ ᴛʜᴇɴ ᴅᴍ ᴍᴇ " ᴘᴀɪᴅ "</b>
+<blockquote>  
+✦ <b>Nᴀᴍᴇ:</b> {}  
+✦ <b>Lɪʙʀᴀʀʏ:</b> <a href='https://docs.pyrogram.org/'>Pʏʀᴏɢʀᴀᴍ</a>  
+✦ <b>Lᴀɴɢᴜᴀɢᴇ:</b> <a href='https://www.python.org/download/releases/3.0/'>Pʏᴛʜᴏɴ 3</a>  
+✦ <b>DᴀᴛᴀBᴀsᴇ:</b> <a href='https://www.mongodb.com/'>MᴏɴɢᴏDB</a>  
+✦ <b>Bᴏᴛ Sᴇʀᴠᴇʀ:</b> Pʀɪᴠᴀᴛᴇ  
+✦ <b>Bᴜɪʟᴅ Sᴛᴀᴛᴜs:</b> v2.7.1 [ Sᴛᴀʙʟᴇ ]  
+</blockquote>
+
+<b>╰────────────────────────╯</b>
 """
+
+
+    SOURCE_TXT = """<b>  
+✭ ғᴏʀ ᴀɴʏ ǫᴜᴇʀʏ, ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ <a href='https://t.me/xaekks'>ᴅᴇᴠᴇʟᴏᴘᴇʀ</a>.  
+✭ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ʏᴏᴜʀ ᴏᴡɴ ᴀɴʏ ᴛʏᴘᴇ ᴏғ ʙᴏᴛ, ᴛʜᴇɴ <a href='https://t.me/xaekks'>ᴅᴍ ᴍᴇ</a> ("ᴘᴀɪᴅ").  
+</b>"""  
+
 
     MANUELFILTER_TXT = """ʜᴇʟᴘ: <b>ꜰɪʟᴛᴇʀꜱ</b>
 - ꜰɪʟᴛᴇʀ ɪꜱ ᴀ ꜰᴇᴀᴛᴜʀᴇ ᴡᴇʀᴇ ᴜꜱᴇʀꜱ ᴄᴀɴ ꜱᴇᴛ ᴀᴜᴛᴏᴍᴀᴛᴇᴅ ʀᴇᴘʟɪᴇꜱ ꜰᴏʀ ᴀ ᴘᴀʀᴛɪᴄᴜʟᴀʀ ᴋᴇʏᴡᴏʀᴅ ᴀɴᴅ ɪ ᴡɪʟʟ ʀᴇꜱᴘᴏɴᴅ ᴡʜᴇɴᴇᴠᴇʀ ᴀ ᴋᴇʏᴡᴏʀᴅ ɪꜱ ꜰᴏᴜɴᴅ ɪɴ ᴛʜᴇ ᴍᴇꜱꜱᴀɢᴇ
@@ -101,14 +110,18 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 • /delallg - <code>Tᴏ ᴅᴇʟᴇᴛᴇ ᴀʟʟ Gғɪʟᴛᴇʀs ғʀᴏᴍ ᴛʜᴇ ʙᴏᴛ's ᴅᴀᴛᴀʙᴀsᴇ.</code>
 • /deletefiles - <code>Tᴏ ᴅᴇʟᴇᴛᴇ CᴀᴍRɪᴘ ᴀɴᴅ PʀᴇDVD Fɪʟᴇs ғʀᴏᴍ ᴛʜᴇ ʙᴏᴛ's ᴅᴀᴛᴀʙᴀsᴇ.</code>"""
 
-    STATUS_TXT = """<b>⍟────[ ʙᴏᴛ sᴛᴀᴛᴜ𝗌 ]────⍟
-★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code>
-★ Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code>
-★ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code>
-★ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{}</code>
-★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{}</code>
-</b>
-•❅─────✧❅✦❅✧─────❅•"""
+    STATUS_TXT = """<b>⍟────[ ʙᴏᴛ sᴛᴀᴛᴜs ]────⍟</b>  
+
+<blockquote><b>★ Tᴏᴛᴀʟ Fɪʟᴇs: <code>{}</code></b></blockquote>  
+<blockquote><b>★ Tᴏᴛᴀʟ Usᴇʀs: <code>{}</code></b></blockquote>  
+<blockquote><b>★ Tᴏᴛᴀʟ Cʜᴀᴛs: <code>{}</code></b></blockquote>  
+<blockquote><b>★ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{}</code></b></blockquote>  
+<blockquote><b>★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{}</code></b></blockquote>  
+
+<b>•❅─────✧❅✦❅✧─────❅•</b>
+"""
+
+
 
     LOG_TEXT_G = """#NewGroup
 Gʀᴏᴜᴘ = {}(<code>{}</code>)
