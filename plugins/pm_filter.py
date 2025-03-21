@@ -1660,10 +1660,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "mods":
         buttons = [
-    [InlineKeyboardButton('ᴄʜᴀᴛɢᴘᴛ', callback_data='chatgpt')],
-    [InlineKeyboardButton('🎭 Sᴛɪᴄᴋᴇʀ_ɪᴅ ⚜️', callback_data='sticker')],
+    [InlineKeyboardButton('🙌 Fᴏɴᴛ Gᴇɴᴇʀᴀᴛᴏʀ 📝', callback_data='font')],
+    [InlineKeyboardButton('🎭 ᴄʜᴀᴛɢᴘᴛ ⚜️', callback_data='chatgpt')],
     [
-        InlineKeyboardButton('🔭 Sᴛᴀᴛs 📊', callback_data='stats'),
+        InlineKeyboardButton('🔭 sᴛᴀᴛs 📊', callback_data='stats'),
         InlineKeyboardButton('🌐 ᴄᴏᴜɴᴛʀʏ 🔅', callback_data='country')
     ],
     [InlineKeyboardButton('‹‹‹ Bᴀᴄᴋ', callback_data='about')]
@@ -1720,7 +1720,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "chatgpt":
         buttons = [[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help'),
-            InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', callback_data='group_info')
+            InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', callback_data='chnl_info')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
