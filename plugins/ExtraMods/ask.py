@@ -10,14 +10,14 @@ def extract_content(response):
         return response.get('content', 'No content available.')
     return str(response)
 
-@Client.on_message(filters.command(["ucy"], prefixes=["L", "i"]))
+@Client.on_message(filters.command(["ssu"], prefixes=["k", "h"]))
 async def gpt_handler(client: Client, message: Message):
     try:
         await client.send_chat_action(message.chat.id, ChatAction.TYPING)
         name = message.from_user.first_name or "User"
 
         if len(message.command) < 2:
-            await message.reply_text(f"<b>Hello {name}, I am Lucy. How can I help you today?</b>")
+            await message.reply_text(f"<b>Hello {name}, I am 「 𓆩•𝐊𝐢𝐬𝐬𝐮 💞•𓆪 」. How can I help you today?</b>")
             return
 
         query = message.text.split(' ', 1)[1]
@@ -63,7 +63,7 @@ async def chat_annie(client: Client, message: Message):
         name = message.from_user.first_name or "User"
 
         if len(message.command) < 2:
-            await message.reply_text(f"<b>Hello {name}, I am Lucy. How can I assist you today?</b>")
+            await message.reply_text(f"<b>Hello {name}, I am 「 𓆩•𝐊𝐢𝐬𝐬𝐮 💞•𓆪 」. How can I assist you today?</b>")
             return
 
         query = message.text.split(' ', 1)[1]
