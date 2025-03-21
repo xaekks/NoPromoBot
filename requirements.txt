@@ -17,3 +17,15 @@ countryinfo
 aiofiles==22.1.0
 telegraph==2.2.0
 Pillow==9.4.0
+
+# AI Tools
+bard
+beautifulsoup4
+google-generativeai
+googletrans==3.1.0a0
+gtts==2.3.1
+lexica-api
+MukeshAPI
+qrcode
+textblob
+langdetect 
