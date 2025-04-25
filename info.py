@@ -21,12 +21,12 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "")
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://vault.pictures/media/images/89/3b/56/893b56043afd43f69733b405a61a3c65.jpg https://vault.pictures/media/images/3d/c4/a0/3dc4a0ab1e674e7794ee0c409a5710d9.jpg https://vault.pictures/media/images/7e/f1/c9/7ef1c9c7db7a43759952f93ccd300340.jpg https://vault.pictures/media/images/82/e9/a5/82e9a53cbc684ebda6384a7b98d8c6f9.jpg https://vault.pictures/media/images/e5/7f/4b/e57f4b075c8a4f2284e5b38325309dea.jpg https://vault.pictures/media/images/37/26/9a/37269ad3435b49a7804d4b7fed793cfd.jpg https://vault.pictures/media/images/ba/ed/e4/baede4615d0644ef82b2267a45e06207.jpg https://vault.pictures/media/images/c0/7d/1d/c07d1d8a75424bfb9ad0d9e4eee0208c.jpg https://vault.pictures/media/images/5b/33/b7/5b33b74c0f6e4fa2b050493ae0038ef8.jpg')).split()
-NOR_IMG = environ.get("NOR_IMG", "https://vault.pictures/media/images/3d/c4/a0/3dc4a0ab1e674e7794ee0c409a5710d9.jpg")
+PICS = (environ.get('PICS', 'https://envs.sh/R3g.jpg https://envs.sh/R3H.jpg https://envs.sh/R3N.jpg https://envs.sh/R3v.jpg https://envs.sh/R39.jpg')).split()
+NOR_IMG = environ.get("NOR_IMG", "https://envs.sh/R3g.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/900c5d3aca7c6b100eb69.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/7b0ba2952ec098bb46997.jpg")
-VRFIED_IMG = environ.get("VRFIED_IMG", "https://vault.pictures/media/images/7e/f1/c9/7ef1c9c7db7a43759952f93ccd300340.jpg")
-VRFY_IMG = environ.get("VRFY_IMG", "https://vault.pictures/media/images/37/26/9a/37269ad3435b49a7804d4b7fed793cfd.jpg")
+VRFIED_IMG = environ.get("VRFIED_IMG", "https://envs.sh/R3g.jpg")
+VRFY_IMG = environ.get("VRFY_IMG", "https://envs.sh/R3N.jpg")
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6670354006').split()]
@@ -84,7 +84,7 @@ MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "False")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 
-LANGUAGES = ["malayalam", "", "tamil", "", "english", "", "hindi", "", "telugu", "", "kannada", "", "gujarati", "", "marathi", "", "punjabi", ""]
+LANGUAGES = ["malayalam", "", "english", "", "hindi", "", "kannada", "", "gujarati", "", "marathi", "", "punjabi", ""]
 
 SEASONS = ["season 1" , "season 2" , "season 3" , "season 4", "season 5" , "season 6" , "season 7" , "season 8" , "season 9" , "season 10"]
 
