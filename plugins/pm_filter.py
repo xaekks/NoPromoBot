@@ -1388,7 +1388,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("Hᴇʟᴩ 💡", callback_data="help"),
             InlineKeyboardButton("Aʙᴏᴜᴛ 📰", callback_data="about")
             ],[
-           InlineKeyboardButton('❗❗ Dɪꜱᴄʟᴀɪᴍᴇʀ ❗❗', callback_data="dicl_btn")
+           InlineKeyboardButton(' All New Movies 🔗', url="https://t.me/sanyamovies")
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -2332,7 +2332,9 @@ async def advantage_spell_chok(client, msg):
                    InlineKeyboardButton("🔍 Tap To Check Spelling ", url=f"https://www.google.com/search?q={reqst_gle}")
                 ],[
                     InlineKeyboardButton("🔍 Tap To Know Release Date 📆", url=f"https://www.google.com/search?q={reqst_gle}+release+date")
-                ]]
+                ],[
+                    InlineKeyboardButton("New Release d Movies Here Join", url=f"https://t.me/sanyamovies")
+        ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
         k = await msg.reply_photo(
